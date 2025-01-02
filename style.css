@@ -8,26 +8,20 @@ body {
   background-color: #ececec;
 }
 
-/*
 .typewriter {
   display: flex;
-  justify-content: center;
 }
 .typewriter p {
-  font-size: 24px;
-  font-weight: bold;
-
   overflow: hidden;
   white-space: nowrap;
-  border-right: 2px solid;
+  border-right: 5px solid;
 
   animation: typing 1s steps(11) forwards, blink 1s step-end infinite;
 }
-*/
 
 /*Header code*/
 .header {
-  background-color: #334553; /*remove later*/
+  background-color: #334553;
   color: #fefefa;
 
   display: flex;
@@ -36,6 +30,7 @@ body {
   justify-content: space-between;
   padding: 0px 20px;
   height: 55px;
+  margin-bottom: 30px;
 }
 .rightSideOfHeader {
   display: flex;
@@ -70,6 +65,22 @@ body {
   background-color: #5c8aaa;
 }
 
+.welcomeContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 110px;
+}
+.welcomeText {
+  width: 750px;
+}
+.accentColour {
+  background-color: #34884f;
+  flex: 1;
+}
 /*Animations*/
 @keyframes typing {
   from {
