@@ -1,12 +1,14 @@
 * {
-  font-family: monospace;
+  font-family: Outfit;
   padding: 0;
   margin: 0;
+  box-sizing: 0;
 }
 body {
-  margin: 10px;
+  background-color: #ececec;
 }
 
+/*
 .typewriter {
   display: flex;
   justify-content: center;
@@ -21,7 +23,47 @@ body {
 
   animation: typing 1s steps(11) forwards, blink 1s step-end infinite;
 }
+*/
 
+/*Header code*/
+.header {
+  background-color: #334553; /*remove later*/
+  color: #fefefa;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  height: 55px;
+}
+.rightSideOfHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.headerButton {
+  color: #fefefa;
+  font-size: 16px;
+
+  border: none;
+  background-color: transparent; /*change later*/
+  height: 55px;
+  padding: 0px 20px;
+}
+.headerButtonContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+/*Animations*/
 @keyframes typing {
   from {
     width: 0;
