@@ -61,6 +61,13 @@ body {
 .headerButtonContainer {
   display: flex;
   flex-direction: row;
+
+  transition: color 0.2s, background-color 0.2s, cursor 0.2s;
+}
+.headerButton:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #5c8aaa;
 }
 
 /*Animations*/
