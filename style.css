@@ -6,18 +6,9 @@
 }
 body {
   background-color: #ececec;
-}
-
-.typewriter {
   display: flex;
-}
-.typewriter p {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 5px solid;
-  color: #2d6e41;
-
-  animation: typing 1s steps(11) forwards, blink 1s step-end infinite;
+  flex-direction: column;
+  height: 100vh;
 }
 
 /*Header code*/
@@ -39,12 +30,10 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-
 .logo {
   font-size: 35px;
   font-weight: 600;
 }
-
 .headerButton {
   color: #fefefa;
   font-size: 16px;
@@ -66,34 +55,90 @@ body {
   background-color: #5c8aaa;
 }
 
-.welcomeContainer {
+/*Welcome text code*/
+.welcomeText {
   display: flex;
-  flex-direction: row;
-  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   font-size: 80px;
-  font-weight: 800;
-  line-height: 110px;
+  font-weight: 600;
+  line-height: 120px;
 }
-.welcomeText {
-  width: 750px;
+.typedText {
+  position: relative;
 }
-.accentColour {
-  flex: 1;
+.typedText span::before {
+  content: "Creating";
+  color: #ff7f50;
+
+  animation: words 20s infinite;
 }
+.typedText span::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 100%;
+  background-color: transparent;
+  border-left: 2px solid #ff7f50;
+  right: -8px;
+  animation: cursor 0.8s infinite;
+}
+
 /*Animations*/
+@keyframes words {
+  0%,
+  20% {
+    content: "Creating";
+  }
+  21%,
+  40% {
+    content: "Developing";
+  }
+  41%,
+  60% {
+    content: "Designing";
+  }
+  61%,
+  80% {
+    content: "Gaming";
+  }
+  81%,
+  100% {
+    content: "Making";
+  }
+}
+
+@keyframes cursor {
+  top {
+    border-left: 2px solid #ececec;
+  }
+}
+
 @keyframes typing {
-  from {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
     width: 0;
   }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  25% {
-    border-color: transparent;
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85%,
+  100% {
+    width: calc(100% + 8px);
   }
 }
