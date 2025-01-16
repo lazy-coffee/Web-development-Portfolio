@@ -2,8 +2,8 @@
   font-family: Outfit;
   padding: 0;
   margin: 0;
-  box-sizing: 0;
 }
+/*
 body {
   background-color: #ececec;
   display: flex;
@@ -11,7 +11,6 @@ body {
   height: 100vh;
 }
 
-/*Header code*/
 .header {
   background-color: #334553;
   color: #fefefa;
@@ -39,7 +38,7 @@ body {
   font-size: 16px;
 
   border: none;
-  background-color: transparent; /*change later*/
+  background-color: transparent;
   height: 55px;
   padding: 0px 20px;
 }
@@ -55,7 +54,6 @@ body {
   background-color: #5c8aaa;
 }
 
-/*Welcome text code*/
 .welcomeText {
   display: flex;
   flex-direction: column;
@@ -86,7 +84,6 @@ body {
   animation: cursor 0.8s infinite;
 }
 
-/*Animations*/
 @keyframes words {
   0%,
   20% {
@@ -140,5 +137,85 @@ body {
   85%,
   100% {
     width: calc(100% + 8px);
+  }
+}
+*/
+
+body{
+  background-color: #1C223A;
+  min-height: 100%;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 100px 0px;
+}
+
+.heading_one{
+  color: #fefefa;
+  font-size: clamp(1.8rem, 10vw, 5rem); /*min, default, max*/
+}
+.typing p{
+  color: #FF8930;
+  font-size: clamp(0.9rem, 5vw, 2.5rem);
+  font-weight: 500;
+
+  border-right: 5px solid #FF8930;
+  white-space: no-wrap;
+  overflow: hidden;
+  animation:
+  typing 2s steps(18),
+  cursor .4s step-end infinite alternate;
+}
+
+.header {
+  color: #fefefa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0px 20px;
+  height: 55px;
+  margin: 20px 0;
+}
+.rightSideOfHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.headerButton {
+  color: #fefefa;
+  font-size: clamp(0.5rem, 3vw, 1.4rem);
+
+  border: none;
+  background-color: transparent;
+  height: 55px;
+  padding: 0px 15px;
+}
+.headerButtonContainer {
+  display: flex;
+  flex-direction: row;
+
+  transition: color 0.2s, background-color 0.2s, cursor 0.2s;
+}
+.headerButton:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #5c8aaa;
+}
+
+@keyframes cursor{
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing{
+  from{
+    width: 0%;
+  }
+  to{
+    width: 100%;
   }
 }
