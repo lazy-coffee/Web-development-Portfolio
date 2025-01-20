@@ -141,12 +141,12 @@ body {
 }
 */
 
-body{
-  background-color: #1C223A;
-  min-height: 100%;
+body {
+  background-color: #1c223a;
+  min-height: 100vh;
 }
 
-.title{
+.title {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -154,21 +154,27 @@ body{
   margin: 100px 0px;
 }
 
-.heading_one{
+.heading_one {
   color: #fefefa;
   font-size: clamp(1.8rem, 10vw, 5rem); /*min, default, max*/
 }
-.typing p{
-  color: #FF8930;
+
+.typing p {
+  color: #ff8930;
   font-size: clamp(0.9rem, 5vw, 2.5rem);
   font-weight: 500;
-
-  border-right: 5px solid #FF8930;
-  white-space: no-wrap;
+  position: relative;
+  border-right: 5px solid #ff8930;
+  white-space: nowrap;
   overflow: hidden;
-  animation:
-  typing 2s steps(18),
-  cursor .4s step-end infinite alternate;
+
+  animation: 
+    cursor 0.8s infinite, 
+    typing 2s steps(18);
+}
+.typing p::before {
+  content: "";
+  animation: keystrokes 15s infinite;
 }
 
 .header {
@@ -178,7 +184,7 @@ body{
   justify-content: space-around;
   padding: 0px 20px;
   height: 55px;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 .rightSideOfHeader {
   display: flex;
@@ -206,16 +212,39 @@ body{
   background-color: #5c8aaa;
 }
 
-@keyframes cursor{
+/*animations*/
+@keyframes cursor {
   50% {
     border-color: transparent;
   }
 }
-@keyframes typing{
-  from{
-    width: 0%;
+@keyframes keystrokes {
+  0%,
+  20% {
+    content: "programmer";
   }
-  to{
+  21%,
+  40% {
+    content: "gamer";
+  }
+  41%,
+  60% {
+    content: "artist";
+  }
+  61%,
+  80% {
+    content: "lover of God";
+  }
+  81%,
+  100% {
+    content: "creative consumer";
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
     width: 100%;
   }
 }
